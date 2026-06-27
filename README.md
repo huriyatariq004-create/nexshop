@@ -12,7 +12,7 @@
 
 ## 🌐 Live Demo
 
-**[https://your-username.github.io/nexshop](https://your-username.github.io/nexshop)**
+**[https://huriyatariq004-create.github.io/nexshop](https://huriyatariq004-create.github.io/nexshop)**
 
 > Replace `your-username` with your actual GitHub username after deployment.
 
@@ -26,37 +26,37 @@ It covers the full shopping journey — from homepage browsing to checkout confi
 
 ---
 
-## 📄 Pages
+ Pages
 
 | Page | File | Description |
 |------|------|-------------|
-| 🏠 Homepage | `index.html` | Hero section, stats, categories, featured products |
-| 🛒 Shop | `shop.html` | All products with live search, filter, and sort |
-| 📦 Product Detail | `product-detail.html` | Individual product with qty selector & related items |
-| 🛍️ Cart | `cart.html` | Cart management — add, remove, update qty, totals |
-| ✅ Checkout | `checkout.html` | Validated form + order confirmation modal |
+|  Homepage | `index.html` | Hero section, stats, categories, featured products |
+|  Shop | `shop.html` | All products with live search, filter, and sort |
+|  Product Detail | `product-detail.html` | Individual product with qty selector & related items |
+|  Cart | `cart.html` | Cart management — add, remove, update qty, totals |
+|  Checkout | `checkout.html` | Validated form + order confirmation modal |
 
 ---
 
-## ✨ Features
+ Features
 
-- ✅ **5 Complete Pages** — Home, Shop, Product Detail, Cart, Checkout
-- ✅ **12 Products** across 4 categories (Electronics, Fashion, Home, Sports)
-- ✅ **Full Cart System** — Add, remove, update quantity; persisted via localStorage
-- ✅ **Real-time Search** — Live search across product names & descriptions
-- ✅ **Filter by Category** — Electronics, Fashion, Home & Living, Sports
-- ✅ **Sort Options** — Price (low/high), Name (A–Z), Top Rated
-- ✅ **Product Detail Pages** — Dynamic routing via URL params (`?id=1`)
-- ✅ **Checkout Form Validation** — All fields validated with inline error messages
-- ✅ **Card Number Formatting** — Auto-formats as user types (`1234 5678...`)
-- ✅ **Responsive Design** — Mobile-first with Bootstrap 5 grid
-- ✅ **Toast Notifications** — Confirmation on add-to-cart actions
-- ✅ **Order Confirmation** — Modal with unique order number on successful checkout
-- ✅ **Consistent Navigation** — Cart count badge updates across all pages
+- 5 Complete Pages** — Home, Shop, Product Detail, Cart, Checkout
+- 12 Products** across 4 categories (Electronics, Fashion, Home, Sports)
+- Full Cart System** — Add, remove, update quantity; persisted via localStorage
+- Real-time Search** — Live search across product names & descriptions
+- Filter by Category** — Electronics, Fashion, Home & Living, Sports
+- Sort Options** — Price (low/high), Name (A–Z), Top Rated
+- Product Detail Pages** — Dynamic routing via URL params (`?id=1`)
+- Checkout Form Validation** — All fields validated with inline error messages
+- Card Number Formatting** — Auto-formats as user types (`1234 5678...`)
+- Responsive Design** — Mobile-first with Bootstrap 5 grid
+- Toast Notifications** — Confirmation on add-to-cart actions
+- Order Confirmation** — Modal with unique order number on successful checkout
+- Consistent Navigation** — Cart count badge updates across all pages
 
 ---
 
-## 🗂️ File Structure
+ File Structure
 
 ```
 nexshop/
@@ -79,7 +79,7 @@ nexshop/
 
 ---
 
-## 🛠️ Tech Stack
+ Tech Stack
 
 | Technology | Use |
 |------------|-----|
@@ -92,18 +92,18 @@ nexshop/
 
 ---
 
-## 🚀 Setup & Running Locally
+ Setup & Running Locally
 
-### Option 1 — Open directly
+ Option 1 — Open directly
 ```bash
-git clone https://github.com/your-username/nexshop.git
+git clone https://github.com/huriyatariq004-create/nexshop.git
 cd nexshop
 # Open index.html in any modern browser
 ```
 
-### Option 2 — VS Code Live Server (recommended)
+ Option 2 — VS Code Live Server (recommended)
 ```bash
-git clone https://github.com/your-username/nexshop.git
+git clone https://github.com/huriyatariq004-create/nexshop.git
 cd nexshop
 # Install "Live Server" extension in VS Code
 # Right-click index.html → "Open with Live Server"
@@ -111,7 +111,7 @@ cd nexshop
 
 ---
 
-## 🌍 Deployment (GitHub Pages)
+ Deployment (GitHub Pages)
 
 1. Push code to a public GitHub repository
 2. Go to **Settings → Pages**
@@ -121,37 +121,25 @@ cd nexshop
 
 ---
 
-## 📸 Screenshots
 
-| Page | Preview |
-|------|---------|
-| Homepage | Hero with categories and featured products |
-| Shop | Product grid with search/filter/sort controls |
-| Cart | Item list with qty controls and order summary |
-| Checkout | Validated form with order confirmation |
-
-*(See `/portfolio/index.html` for detailed visual write-up)*
-
----
-
-## 💡 Key Technical Decisions
+ Key Technical Decisions
 
 ### localStorage for Cart Persistence
 Cart data is serialized as JSON and stored under the key `nexshop_cart`. Every page loads the cart on `DOMContentLoaded`, ensuring the badge count and cart state stay in sync without a server.
 
-### Modular JavaScript
+ Modular JavaScript
 Logic is split across 7 JS files, each with a single responsibility:
 - `products.js` — data + shared render function
 - `cart.js` — all CRUD operations
 - `app.js` — shared init
 - Page-specific files for each page's unique logic
 
-### Form Validation Architecture
+ Form Validation Architecture
 A reusable `validateField(fieldId, conditionFn, errorMsg)` function handles all validation. It checks the condition, shows/hides error messages, and adds/removes `is-invalid` classes. All fields are validated in sequence on form submit.
 
 ---
 
-## 📝 Reflection (200 words)
+ Reflection (200 words)
 
 Four weeks ago, I could write a basic HTML page with some CSS styling. Today, I've built a complete e-commerce platform with five interconnected pages, a persistent cart system, real-time search and filtering, and full form validation — entirely from scratch.
 
@@ -165,13 +153,13 @@ If I could tell Week 1 me one thing: **don't be afraid to break things**. Every 
 
 ---
 
-## 👤 Author
+ Author
 
 **QWETRUM Internship 2026 — Web Development Track**  
-Capstone Project · Submitted Saturday, 28 June 2026
+Capstone Project · Submitted Saturday, 27 June 2026
 
 ---
 
-## 📄 License
+License
 
 This project was created for educational purposes as part of the QWETRUM Technologies Internship Program 2026.
