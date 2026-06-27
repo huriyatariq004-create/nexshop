@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexShop — Modern E-Commerce</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">
+      <i class="bi bi-bag-heart-fill text-accent"></i> NexShop
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="cart.html" class="cart-icon position-relative text-white">
+          <i class="bi bi-bag fs-5"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container h-100 d-flex align-items-center">
+    <div class="row align-items-center w-100">
+      <div class="col-lg-6">
+        <span class="hero-eyebrow">New Arrivals 2026</span>
+        <h1 class="hero-title">Style That <span class="text-gradient">Speaks</span> For You</h1>
+        <p class="hero-sub">Discover curated fashion, tech, and lifestyle products — delivered fast, priced right.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="shop.html" class="btn btn-accent btn-lg px-4">Shop Now <i class="bi bi-arrow-right"></i></a>
+          <a href="shop.html?category=new" class="btn btn-outline-light btn-lg px-4">New Arrivals</a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+        <div class="hero-visual">
+          <div class="hero-card hero-card-1">
+            <i class="bi bi-phone"></i>
+            <span>Tech</span>
+          </div>
+          <div class="hero-card hero-card-2">
+            <i class="bi bi-bag"></i>
+            <span>Fashion</span>
+          </div>
+          <div class="hero-card hero-card-3">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+          </div>
+          <div class="hero-blob"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section py-4">
+  <div class="container">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num">1,200+</div>
+          <div class="stat-label">Products</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num">99%</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Shop by Category</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="shop.html?category=electronics" class="cat-card cat-tech">
+          <i class="bi bi-laptop"></i>
+          <h4>Electronics</h4>
+          <p>Phones, Laptops & More</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="shop.html?category=fashion" class="cat-card cat-fashion">
+          <i class="bi bi-bag-heart"></i>
+          <h4>Fashion</h4>
+          <p>Clothes, Shoes & Accessories</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="shop.html?category=home" class="cat-card cat-home">
+          <i class="bi bi-house-heart"></i>
+          <h4>Home & Living</h4>
+          <p>Decor, Furniture & More</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="py-5 bg-light-custom">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Featured Products</h2>
+    <div class="row g-4" id="featuredProducts"></div>
+    <div class="text-center mt-4">
+      <a href="shop.html" class="btn btn-accent px-5">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNER -->
+<section class="promo-section py-5">
+  <div class="container">
+    <div class="promo-card text-center">
+      <h2>🎉 Summer Sale — Up to 40% Off!</h2>
+      <p>Limited time offer. Shop your favorites now before they're gone.</p>
+      <a href="shop.html" class="btn btn-light btn-lg px-5 mt-2">Grab the Deal</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold fs-5"><i class="bi bi-bag-heart-fill"></i> NexShop</p>
+    <p class="mb-0 text-muted small">© 2026 NexShop. Internship Capstone Project — QWETRUM Technologies.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+<script>
+  // Render featured products on home page
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCartCount();
+    const featured = products.slice(0, 4);
+    const container = document.getElementById('featuredProducts');
+    container.innerHTML = featured.map(p => renderProductCard(p)).join('');
+  });
+</script>
+</body>
+</html>

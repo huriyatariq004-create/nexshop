@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — NexShop</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">
+      <i class="bi bi-bag-heart-fill text-accent"></i> NexShop
+    </a>
+    <div class="ms-auto d-flex align-items-center gap-3">
+      <a href="cart.html" class="cart-icon position-relative text-white">
+        <i class="bi bi-bag fs-5"></i>
+        <span class="cart-badge" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-title">Checkout</h1>
+    <div class="checkout-steps mt-3">
+      <span class="step active">1. Info</span>
+      <span class="step-divider">→</span>
+      <span class="step active">2. Shipping</span>
+      <span class="step-divider">→</span>
+      <span class="step">3. Payment</span>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- FORM -->
+    <div class="col-lg-7">
+      <div class="checkout-form-card">
+        <h4 class="mb-4">Contact Information</h4>
+        <div class="row g-3" id="checkoutForm">
+          <div class="col-md-6">
+            <label class="form-label">First Name *</label>
+            <input type="text" id="firstName" class="form-control" placeholder="John" />
+            <div class="invalid-feedback" id="firstNameErr"></div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name *</label>
+            <input type="text" id="lastName" class="form-control" placeholder="Doe" />
+            <div class="invalid-feedback" id="lastNameErr"></div>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Email Address *</label>
+            <input type="email" id="email" class="form-control" placeholder="john@example.com" />
+            <div class="invalid-feedback" id="emailErr"></div>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000" />
+            <div class="invalid-feedback" id="phoneErr"></div>
+          </div>
+
+          <div class="col-12 mt-3">
+            <h5 class="mb-3">Shipping Address</h5>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Street Address *</label>
+            <input type="text" id="address" class="form-control" placeholder="123 Main Street" />
+            <div class="invalid-feedback" id="addressErr"></div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">City *</label>
+            <input type="text" id="city" class="form-control" placeholder="New York" />
+            <div class="invalid-feedback" id="cityErr"></div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">State *</label>
+            <input type="text" id="state" class="form-control" placeholder="NY" />
+            <div class="invalid-feedback" id="stateErr"></div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">ZIP *</label>
+            <input type="text" id="zip" class="form-control" placeholder="10001" />
+            <div class="invalid-feedback" id="zipErr"></div>
+          </div>
+
+          <div class="col-12 mt-3">
+            <h5 class="mb-3">Payment Details <span class="badge bg-secondary">UI Only</span></h5>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Card Number *</label>
+            <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" />
+            <div class="invalid-feedback" id="cardNumberErr"></div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Expiry Date *</label>
+            <input type="text" id="expiry" class="form-control" placeholder="MM/YY" maxlength="5" />
+            <div class="invalid-feedback" id="expiryErr"></div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">CVV *</label>
+            <input type="text" id="cvv" class="form-control" placeholder="123" maxlength="3" />
+            <div class="invalid-feedback" id="cvvErr"></div>
+          </div>
+
+          <div class="col-12 mt-2">
+            <button class="btn btn-accent btn-lg w-100" onclick="placeOrder()">
+              <i class="bi bi-lock-fill me-2"></i> Place Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="col-lg-5">
+      <div class="order-summary sticky-top" style="top: 90px;">
+        <h4 class="mb-4">Order Summary</h4>
+        <div id="checkoutItems"></div>
+        <div class="summary-divider mt-3"></div>
+        <div class="summary-row mt-3">
+          <span>Subtotal</span><span id="coSubtotal">$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span><span>Free</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax (8%)</span><span id="coTax">$0.00</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-row total-row">
+          <span>Total</span><span id="coTotal">$0.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal fade" id="successModal" tabindex="-1" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="success-icon mb-3">
+        <i class="bi bi-check-circle-fill text-success" style="font-size:4rem;"></i>
+      </div>
+      <h3 class="fw-bold">Order Placed!</h3>
+      <p class="text-muted">Thank you for shopping with NexShop. Your order has been confirmed.</p>
+      <p><strong>Order #</strong> <span id="orderNum"></span></p>
+      <a href="index.html" class="btn btn-accent px-4 mt-2">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold fs-5"><i class="bi bi-bag-heart-fill"></i> NexShop</p>
+    <p class="mb-0 text-muted small">© 2026 NexShop. Internship Capstone Project — QWETRUM Technologies.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

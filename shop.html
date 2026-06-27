@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — NexShop</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">
+      <i class="bi bi-bag-heart-fill text-accent"></i> NexShop
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="cart.html" class="cart-icon position-relative text-white">
+          <i class="bi bi-bag fs-5"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-title">Our Products</h1>
+    <p class="page-sub">Find exactly what you're looking for</p>
+  </div>
+</div>
+
+<div class="container py-5">
+  <!-- SEARCH + CONTROLS -->
+  <div class="shop-controls mb-4">
+    <div class="search-wrap">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" id="searchInput" class="form-control search-input" placeholder="Search products..." />
+    </div>
+    <div class="filter-sort-wrap">
+      <select id="categoryFilter" class="form-select control-select">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Home & Living</option>
+        <option value="sports">Sports</option>
+      </select>
+      <select id="sortSelect" class="form-select control-select">
+        <option value="default">Sort: Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A–Z</option>
+        <option value="rating">Top Rated</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- RESULT COUNT -->
+  <p class="result-count mb-4" id="resultCount">Showing all products</p>
+
+  <!-- PRODUCT GRID -->
+  <div class="row g-4" id="productGrid"></div>
+
+  <!-- NO RESULTS -->
+  <div id="noResults" class="text-center py-5 d-none">
+    <i class="bi bi-search fs-1 text-muted"></i>
+    <h4 class="mt-3 text-muted">No products found</h4>
+    <p class="text-muted">Try a different search term or category.</p>
+    <button class="btn btn-accent" onclick="clearFilters()">Clear Filters</button>
+  </div>
+</div>
+
+<footer class="footer py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold fs-5"><i class="bi bi-bag-heart-fill"></i> NexShop</p>
+    <p class="mb-0 text-muted small">© 2026 NexShop. Internship Capstone Project — QWETRUM Technologies.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
