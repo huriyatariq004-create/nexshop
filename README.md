@@ -1,4 +1,4 @@
-# 🛍️ NexShop — E-Commerce Capstone Project
+ NexShop — E-Commerce Capstone Project
 
 > **QWETRUM Technologies · Web Development Internship 2026 · Final Week Capstone**
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🌐 Live Demo
+Live Demo
 
 **[https://huriyatariq004-create.github.io/nexshop](https://huriyatariq004-create.github.io/nexshop)**
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📋 Project Overview
+ Project Overview
 
 NexShop is a **complete, fully functional multi-page e-commerce website** built as the capstone project for the QWETRUM Technologies Web Development Internship 2026.
 
